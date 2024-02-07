@@ -1,0 +1,39 @@
+# gasto_combustivel by: Pedroznoob
+
+# variaveis
+modelo = ""
+autonomia = 0.0
+distancia = 0.0
+valor = 0.0
+quantidade = 0.0
+total = 0.0
+
+# entrada dos dados
+print("-----------------------------------------")
+print("         CONSUMO DE COMBUSTÍVEL          ")
+print("-----------------------------------------")
+
+modelo = input("Modelo do carro? :")
+autonomia =input("Autonomia do carro? :")
+distancia = input("Distância da viagem? :")
+valor = input("Preço do combustível? :")
+
+# calculo
+quantidade = float(distancia) / float(autonomia)
+total = float(quantidade) * float(valor)
+
+# resultado
+
+print("-----------------------------------------")
+print("         R E S U L T A D O               ")
+print("-----------------------------------------")
+
+print("Modelo do veículo: " + modelo)
+print("Autonomia do veículo: " + str(autonomia) + "Km/l")
+print("Distância percorrida: " + str(distancia) + "Km")
+print("Valor do combustível: R$" + str(valor))
+print()
+print("-----------------------------------------")
+print("Quantidade de combustível utilizado: " + str(quantidade) + "l")
+print("Total gasto com a viagem: R$" + str(total))
+print("-----------------------------------------")
