@@ -7,6 +7,9 @@ nota_do_bimestre_4 = 0.0
 nota_final = float(nota_do_bimestre_1) + float(nota_do_bimestre_2) + float(nota_do_bimestre_3) + float(nota_do_bimestre_4) / 4
 
 # Entrada dos dados
+print("****************************************")
+print("*             MÉDIA FINAL              *")
+print("****************************************")
 nome = input("Seu nome: ")
 nota_do_bimestre_1 = float(input("Nota do Primeiro Bimestre: "))
 nota_do_bimestre_2 = float(input("Nota do Segundo Bimestre: "))
@@ -16,9 +19,15 @@ nota_do_bimestre_4 = float(input("Nota do Quarto Bimestre: "))
 # Processar os valores para obter a Nota Final
 
 nota_final = (float(nota_do_bimestre_1) + float(nota_do_bimestre_2) + float(nota_do_bimestre_3) + float(nota_do_bimestre_4)) / 4
+if nota_final >= 7:
+    situacao = str('APROVADO')
+else:
+    situacao = str('REPROVADO')
 
 # Resultado
 print("****************************************")
-print("*             MÉDIA FINAL              *")
+print(f"*{nome}, sua nota final é: {nota_final}*")
 print("****************************************")
-print("*" + nome + ", sua nota final é:" + str(nota_final))
+print(f"*{nome}, você foi {situacao} com média {nota_final}")
+if situacao == str('REPROVADO'):
+    print(f'Você precisa de uma média 7.0 para ser aprovado.')
