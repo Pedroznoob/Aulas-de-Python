@@ -27,19 +27,19 @@ imc = float(peso) / float(altura) ** 2
 # Classificação do IMC
 if imc < 16:
     classificação = "Magreza grave"
-if imc >= 16 and imc < 17: 
+elif imc >= 16 and imc < 17: 
         classificação = "Magreza moderada"
-if imc >= 17 and imc < 18.5:
+elif imc >= 17 and imc < 18.5:
         classificação = "Magreza leve"
-if imc >= 18.5 and imc < 25:
+elif imc >= 18.5 and imc < 25:
         classificação = "Saudável"
-if imc >= 25 and imc < 30:
+elif imc >= 25 and imc < 30:
         classificação = "Sobrepeso"
-if imc >= 30 and imc < 35:
+elif imc >= 30 and imc < 35:
         classificação = "Obesidade Grau I"
-if imc >= 35 and imc < 40:
+elif imc >= 35 and imc < 40:
         classificação = "Obesidade Grau II (considerada severa)"
-if imc > 40:
+else:
     classificação = "Obesidade Grau III (considerada mórbida)"
 
 # Resultado
