@@ -1,33 +1,39 @@
-# Criação das variáveis by: Pedroznoob
-nome = ""
-nota_do_bimestre_1 = 0.0
-nota_do_bimestre_2 = 0.0
-nota_do_bimestre_3 = 0.0
-nota_do_bimestre_4 = 0.0
-nota_final = float(nota_do_bimestre_1) + float(nota_do_bimestre_2) + float(nota_do_bimestre_3) + float(nota_do_bimestre_4) / 4
+# gasto_combustivel by: Pedroznoob
 
-# Entrada dos dados
-print("****************************************")
-print("*             MÉDIA FINAL              *")
-print("****************************************")
-nome = input("Seu nome: ")
-nota_do_bimestre_1 = float(input("Nota do Primeiro Bimestre: "))
-nota_do_bimestre_2 = float(input("Nota do Segundo Bimestre: "))
-nota_do_bimestre_3 = float(input("Nota do Terceiro Bimestre: "))
-nota_do_bimestre_4 = float(input("Nota do Quarto Bimestre: "))
+# variaveis
+modelo = ""
+autonomia = 0.0
+distancia = 0.0
+valor = 0.0
+quantidade = 0.0
+total = 0.0
 
-# Processar os valores para obter a Nota Final
+# entrada dos dados
+print("-----------------------------------------")
+print("         CONSUMO DE COMBUSTÍVEL          ")
+print("-----------------------------------------")
 
-nota_final = (float(nota_do_bimestre_1) + float(nota_do_bimestre_2) + float(nota_do_bimestre_3) + float(nota_do_bimestre_4)) / 4
-if nota_final >= 7:
-    situacao = str('APROVADO')
-else:
-    situacao = str('REPROVADO')
+modelo = input("Modelo do carro? :")
+autonomia =input("Autonomia do carro? :")
+distancia = input("Distância da viagem? :")
+valor = input("Preço do combustível? :")
 
-# Resultado
-print("****************************************")
-print(f"*{nome}, sua nota final é: {nota_final}*")
-print("****************************************")
-print(f"*{nome}, você foi {situacao} com média {nota_final}")
-if situacao == str('REPROVADO'):
-    print(f'Você precisa de uma média 7.0 para ser aprovado.')
+# calculo
+quantidade = float(distancia) / float(autonomia)
+total = float(quantidade) * float(valor)
+
+# resultado
+
+print("-----------------------------------------")
+print("         R E S U L T A D O               ")
+print("-----------------------------------------")
+
+print(f"Modelo do veículo: {modelo}")
+print(f"Autonomia do veículo: {autonomia} Km/l")
+print(f"Distância percorrida: {distancia} Km")
+print(f"Valor do combustível: R${valor}")
+print()
+print("-----------------------------------------")
+print(f"Quantidade de combustível utilizado: {quantidade:.2f}l")
+print(f"Total gasto com a viagem: R${total:.2f}")
+print("-----------------------------------------")
